@@ -1,0 +1,77 @@
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-size: 32pt;
+
+}
+
+
+
+main {
+
+  display: grid;
+  grid-template-columns: 50vw 40vw;
+  grid-template-rows: 10vh 60vh;
+  margin-right: 5%;
+  grid-column-gap: 5%;
+  justify-content: center;
+  line-height: 1.5;
+
+}
+
+.grid-container {
+  display: grid;
+  justify-content: center;
+  grid-row: 1;
+  width: 90vw;
+}
+
+div.grid {
+  grid-column: 1;
+grid-row: 2;
+  justify-self: start;
+  margin: 50px;
+  width: 465px;
+ height: 465px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+div.grid-item {
+  width: 31px;
+  height: 31px;
+  border: 1px solid black;
+  cursor: pointer;
+fill: #ffffff;
+}
+
+::selection {
+    background: #ffe500;
+    color: #121212;
+
+}
+
+.tiny {
+  vertical-align: super;
+  font-size: 0.2em;
+  margin-top: 0;
+  padding: 0.2em;
+}
+
+section.clues {
+grid-row: 2;
+
+  display: grid;
+  grid-column: 2;
+  grid-template-columns: repeat(2, 50%);
+  border: 1px solid black;
+  font-size: 0.875rem;
+    line-height: 1.375rem;
+
+
+}
