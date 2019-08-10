@@ -14,7 +14,7 @@ const init = () => {
       const tiny = document.createElement('p')
       tiny.innerHTML = i
       square.append(tiny)
-      tiny.classList.add('tiny')
+      tiny.setAttribute('id', 'tiny')
       square.dataset.index = i
       squares.push(square)
       square.dataset.row = Math.floor(i/15) + 1
@@ -23,37 +23,66 @@ const init = () => {
 
     }
   }
+  const makeClues = () => {
+    const clueSection = document.querySelector('.clues')
+    clueSection.style.gridTemplateRows = (`repeat(${26}, 1.375rem)`)
+    const clues = clueSection.style.gridTemplateRows
+    const rows = clues.split(' ').length
+
+    for(let i = 0; i < rows; i ++ ) {
+      const clue = document.createElement('div')
+      clueSection.append(clue)
+      clue.dataset.index = i
+      const tiny = document.createElement('p')
+      tiny.innerHTML = i
+      clue.append(tiny)
+      tiny.setAttribute('id', 'tiny')
+      clueSection.style.height = `${26 * 1.375}em`
+    }
+
+
+  }
 
   makeGrid()
+  makeClues()
 
 
   const across = (clue, index) => {
     const answer = document.createElement('h6')
-    answer.innerHTML = clue
+
+
+    console.log(answer)
+    answer.append(clue)
+
     const letters = answer.innerHTML.split('')
 
     for(let i = index; i < index + clue.length; i ++) {
       document.querySelector(`[data-index="${i}"]`).append(letters[i-index])
+      document.querySelector(`[data-index="${i}"]`).classList.add('letters')
+      document.querySelector(`[data-index="${i}"]`).classList.add(clue)
+
 
     }
+
   }
+
 
   across('TETRIS', 5)
   across('BEATLEMANIACS', 120)
+  const a = document.createElement('a')
+  a.href='https://github.com/Lily-La-Day/sei-project-one-tetris'
+  document.querySelector('.TETRIS').append(a)
+  console.log(a)
 
 
   const down = (clue, index) => {
     const answer = document.createElement('h6')
     answer.innerHTML = clue
-
     const letters = answer.innerHTML.split('')
-
     for(let i = index; i < index + (15*clue.length) - 14; i +=15) {
 
-      // console.log(Math.floor([i/15]-clue.length))
-      // console.log(index+(i-index))
-      console.log((index+(i-index)-index)/15)
       document.querySelector(`[data-index="${i}"]`).append(letters[(index+(i-index)-index)/15])
+      document.querySelector(`[data-index="${i}"]`).classList.add('letters')
 
 
     }
@@ -61,79 +90,16 @@ const init = () => {
 
   }
 
-  down('TETRIS', 10)
-  down('AMIWRITE', 112)
+
+  down('AMIWRIT', 16)
 }
 
 
 
 
 
+
+
+
+
 window.addEventListener('DOMContentLoaded', init)
-
-
-
-
-// answer.innerHTML = 'snake'
-// const snake = answer.innerHTML.split('')
-// console.log(snake)
-// for(let i = 10; i < 85; i +=15) {
-//   console.log(i)
-//   document.querySelector(`[data-index="${i}"]`).append(snake[i-10])
-//   console.log(snake[i-15-25])
-//
-// }
-// for(let j = 0; j < snake.length; j++){
-//   console.log(snake[j])
-//   console.log(i)
-//   console.log(document.querySelector(`[data-index="${i}"]`).append(snake[i][j]))
-//
-//
-// }
-
-
-
-
-//
-// answer.innerHTML = 'beatlemaniacs'
-// const word = answer.innerHTML.split('')
-// console.log(word)
-// for(let i = 120; i < 133; i ++) {
-//   document.querySelector(`[data-index="${i}"]`).append(word[i-120])
-//
-// }
-//
-// answer.innerHTML = 'snake'
-// const snake = answer.innerHTML.split('')
-// console.log(snake)
-// for(let i = 10; i < 85; i +=15) {
-//   console.log(i)
-//   console.log(i/15-1)
-//   document.querySelector(`[data-index="${i}"]`).append(snake[Math.floor(i/15)])
-//
-//
-// }
-
-
-
-
-
-
-// const clueSection = document.querySelector('.clues')
-// clueSection.style.gridTemplateRows = (`repeat(${26}, 1.375rem)`)
-// const clues = clueSection.style.gridTemplateRows
-// const rows = clues.split(' ').length
-//
-// for(let i = 0; i < rows; i ++ ) {
-//   const clue = document.createElement('div')
-//   clueSection.append(clue)
-//   clue.dataset.index = i
-//   const tiny = document.createElement('p')
-//   tiny.innerHTML = i
-//   clue.append(tiny)
-//   tiny.classList.add('tiny')
-//   clueSection.style.height = `${26 * 1.375}rem`
-// }
-//
-//
-// }

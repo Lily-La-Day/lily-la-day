@@ -1,3 +1,5 @@
+
+
 * {
   box-sizing: border-box;
 }
@@ -23,6 +25,15 @@ main {
   line-height: 1.5;
 
 }
+
+.letters  {
+font-size: 1.1em;
+display: flex;
+font-family: 'Source Sans Pro', sans-serif;
+background-color: white !important;
+
+}
+
 
 .grid-container {
   display: grid;
@@ -50,6 +61,7 @@ div.grid-item {
 fill: #ffffff;
 align-content: center;
 justify-content: center;
+background-color: black;
 }
 
 ::selection {
@@ -58,11 +70,14 @@ justify-content: center;
 
 }
 
-.tiny {
+#tiny {
   vertical-align: super;
-  font-size: 0.4em;
+  font-size: 0.3em;
   margin-top: 0;
-  padding: 0.2em;
+  padding-left: 0.3em;
+display: block;
+  font-family: 'Source Sans Pro', sans-serif;
+  color: white;
 }
 
 section.clues {
