@@ -11,6 +11,9 @@ const init = () => {
       const square = document.createElement('div')
       grid.append(square)
       square.classList.add('grid-item')
+      const a = document.createElement('a')
+      a.href=''
+      square.append(a)
       const tiny = document.createElement('p')
       tiny.innerHTML = i
       square.append(tiny)
@@ -57,7 +60,8 @@ const init = () => {
     const letters = answer.innerHTML.split('')
 
     for(let i = index; i < index + clue.length; i ++) {
-      document.querySelector(`[data-index="${i}"]`).append(letters[i-index])
+      document.querySelector(`[data-index="${i}"] a`).append(letters[i-index])
+
       document.querySelector(`[data-index="${i}"]`).classList.add('letters')
       document.querySelector(`[data-index="${i}"]`).classList.add(clue)
 
@@ -69,10 +73,18 @@ const init = () => {
 
   across('TETRIS', 5)
   across('BEATLEMANIACS', 120)
-  const a = document.createElement('a')
-  a.href='https://github.com/Lily-La-Day/sei-project-one-tetris'
-  document.querySelector('.TETRIS').append(a)
-  console.log(a)
+  const tetris = document.querySelectorAll('.TETRIS')
+
+  tetris.forEach(el => {
+
+    el.querySelector('a').href = 'https://github.com/Lily-La-Day/sei-project-one-tetris'
+    console.log(el)
+
+
+
+  })
+
+
 
 
   const down = (clue, index) => {
