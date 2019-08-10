@@ -3,13 +3,17 @@ const width = 15
 const squares = []
 
 const answers = [
-  'tetris',
-  'snake',
-  'whodat',
-  'beatlemaniacs',
-  'haikuwho',
   'strangerthings',
+  'snake',
   'amiwrite',
+  'haikuwho',
+  'beatlemaniacs',
+
+  'tetris',
+
+  'whodat',
+
+
   'aboutme',
   'bangemployed',
   'github',
@@ -120,8 +124,18 @@ const init = () => {
     for(let i = index; i < index + (15*clue.length) - 14; i +=15) {
 
       document.querySelector(`[data-index="${i}"] a`).append(letters[(index+(i-index)-index)/15])
+
       document.querySelector(`[data-index="${i}"]`).classList.add('letters')
       document.querySelector(`[data-index="${i}"]`).classList.add(clue)
+      if (document.querySelector(`[data-index="${i}"] a`).innerText.length === 2) {
+        const extras = document.querySelector(`[data-index="${i}"] a`)
+        extras.innerText = extras.innerText[0]
+        console.log(extras)
+
+
+
+      }
+
 
 
     }
@@ -158,6 +172,17 @@ const init = () => {
 
     })
   })
+  for(let i = 0; i < width * width; i ++){
+    if (document.querySelector(`[data-index="${i}"] a`).innerText.length === 2) {
+      const extras = document.querySelector(`[data-index="${i}"] a`)
+      extras.innerText = extras.innerText[0]
+      console.log(extras)
+    }
+
+
+  }
+
+
 
 
 
