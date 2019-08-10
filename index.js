@@ -4,78 +4,66 @@ const squares = []
 
 const init = () => {
 
-  for(let i = 0; i < width * width; i ++ ) {
-    const grid = document.querySelector('.grid')
-    const square = document.createElement('div')
-    grid.append(square)
-    square.classList.add('grid-item')
-    const tiny = document.createElement('p')
-    tiny.innerHTML = i
-    square.append(tiny)
-    tiny.classList.add('tiny')
-    square.dataset.index = i
-    squares.push(square)
-    square.dataset.row = Math.floor(i/15) + 1
-    square.dataset.column = i % 15 + 1
+  const makeGrid = () => {
+
+    for(let i = 0; i < width * width; i ++ ) {
+      const grid = document.querySelector('.grid')
+      const square = document.createElement('div')
+      grid.append(square)
+      square.classList.add('grid-item')
+      const tiny = document.createElement('p')
+      tiny.innerHTML = i
+      square.append(tiny)
+      tiny.classList.add('tiny')
+      square.dataset.index = i
+      squares.push(square)
+      square.dataset.row = Math.floor(i/15) + 1
+      square.dataset.column = i % 15 + 1
+
+
+    }
+  }
+
+  makeGrid()
+
+
+  const across = (clue, index) => {
+    const answer = document.createElement('h6')
+    answer.innerHTML = clue
+    const letters = answer.innerHTML.split('')
+
+    for(let i = index; i < index + clue.length; i ++) {
+      document.querySelector(`[data-index="${i}"]`).append(letters[i-index])
+
+    }
+  }
+
+  across('TETRIS', 5)
+  across('BEATLEMANIACS', 120)
+
+
+  const down = (clue, index) => {
+    const answer = document.createElement('h6')
+    answer.innerHTML = clue
+
+    const letters = answer.innerHTML.split('')
+
+    for(let i = index; i < index + (15*clue.length) - 14; i +=15) {
+
+      // console.log(Math.floor([i/15]-clue.length))
+      // console.log(index+(i-index))
+      console.log((index+(i-index)-index)/15)
+      document.querySelector(`[data-index="${i}"]`).append(letters[(index+(i-index)-index)/15])
+
+
+    }
 
 
   }
-  
 
-
-  const answer = document.createElement('h6')
-  answer.innerHTML = 'TETRIS'
-  const letters = answer.innerHTML.split('')
-  console.log(letters)
-  for(let i = 5; i < 11; i ++) {
-    document.querySelector(`[data-index="${i}"]`).append(letters[i-5])
-
-  }
-
-
-  answer.innerHTML = 'beatlemaniacs'
-  const word = answer.innerHTML.split('')
-  console.log(word)
-  for(let i = 120; i < 133; i ++) {
-    document.querySelector(`[data-index="${i}"]`).append(word[i-120])
-
-  }
-
-  answer.innerHTML = 'snake'
-  const snake = answer.innerHTML.split('')
-  console.log(snake)
-  for(let i = 10; i < 85; i +=15) {
-    console.log(i)
-    console.log(i/15-1)
-    document.querySelector(`[data-index="${i}"]`).append(snake[Math.floor(i/15)])
-
-
-  }
-
-
-
-
-
-
-  const clueSection = document.querySelector('.clues')
-  clueSection.style.gridTemplateRows = (`repeat(${26}, 1.375rem)`)
-  const clues = clueSection.style.gridTemplateRows
-  const rows = clues.split(' ').length
-
-  for(let i = 0; i < rows; i ++ ) {
-    const clue = document.createElement('div')
-    clueSection.append(clue)
-    clue.dataset.index = i
-    const tiny = document.createElement('p')
-    tiny.innerHTML = i
-    clue.append(tiny)
-    tiny.classList.add('tiny')
-    clueSection.style.height = `${26 * 1.375}rem`
-  }
-
-
+  down('TETRIS', 10)
+  down('AMIWRITE', 112)
 }
-
 
 
 
@@ -104,14 +92,48 @@ window.addEventListener('DOMContentLoaded', init)
 // }
 
 
+
+
+//
+// answer.innerHTML = 'beatlemaniacs'
+// const word = answer.innerHTML.split('')
+// console.log(word)
+// for(let i = 120; i < 133; i ++) {
+//   document.querySelector(`[data-index="${i}"]`).append(word[i-120])
+//
+// }
+//
 // answer.innerHTML = 'snake'
 // const snake = answer.innerHTML.split('')
 // console.log(snake)
-// for(let j = 0; j < snake.length; j++){
-//   for(let i = 10; i < 85; i +=15) {
-//     console.log(j)
-//     document.querySelector(`[data-index="${i}"]`).append(snake[j])
+// for(let i = 10; i < 85; i +=15) {
+//   console.log(i)
+//   console.log(i/15-1)
+//   document.querySelector(`[data-index="${i}"]`).append(snake[Math.floor(i/15)])
 //
 //
-//   }
+// }
+
+
+
+
+
+
+// const clueSection = document.querySelector('.clues')
+// clueSection.style.gridTemplateRows = (`repeat(${26}, 1.375rem)`)
+// const clues = clueSection.style.gridTemplateRows
+// const rows = clues.split(' ').length
+//
+// for(let i = 0; i < rows; i ++ ) {
+//   const clue = document.createElement('div')
+//   clueSection.append(clue)
+//   clue.dataset.index = i
+//   const tiny = document.createElement('p')
+//   tiny.innerHTML = i
+//   clue.append(tiny)
+//   tiny.classList.add('tiny')
+//   clueSection.style.height = `${26 * 1.375}rem`
+// }
+//
+//
 // }
