@@ -32,6 +32,8 @@ font-size: 1.1em;
 display: flex;
 font-family: 'Source Sans Pro', sans-serif;
 background-color: white !important;
+text-transform: uppercase;
+
 
 }
 
@@ -82,13 +84,14 @@ display: block;
 }
 
 section.clues {
+  justify-content: center;
 font-size: 32pt;
 grid-row: 2;
-
+padding: 2em;
   display: grid;
   grid-column: 2;
   grid-template-columns: repeat(2, 50%);
-  border: 1px solid black;
+
   font-size: 0.875em;
     line-height: 1.375em;
 
