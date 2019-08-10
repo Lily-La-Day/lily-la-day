@@ -6,7 +6,7 @@ html, body {
   margin: 0;
   padding: 0;
   height: 100%;
-  font-size: 32pt;
+
 
 }
 
@@ -48,6 +48,8 @@ div.grid-item {
   border: 1px solid black;
   cursor: pointer;
 fill: #ffffff;
+align-content: center;
+justify-content: center;
 }
 
 ::selection {
@@ -58,20 +60,21 @@ fill: #ffffff;
 
 .tiny {
   vertical-align: super;
-  font-size: 0.2em;
+  font-size: 0.4em;
   margin-top: 0;
   padding: 0.2em;
 }
 
 section.clues {
+font-size: 32pt;
 grid-row: 2;
 
   display: grid;
   grid-column: 2;
   grid-template-columns: repeat(2, 50%);
   border: 1px solid black;
-  font-size: 0.875rem;
-    line-height: 1.375rem;
+  font-size: 0.875em;
+    line-height: 1.375em;
 
 
 }
