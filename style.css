@@ -15,9 +15,23 @@ font-family: 'Source Sans Pro', sans-serif;
 
 
 .heading-area {
-  padding-left: 2%;
 
-  flex-wrap: wrap;
+  padding-left: 2%;
+height: auto;
+
+}
+
+.setter {
+    font-family: Merriweather, serif;
+color: #bb3b80;
+}
+.icons{
+  padding-top: 0.5em;
+}
+
+
+.italic {
+font-style: italic;
 }
 
 .icons {
@@ -36,7 +50,7 @@ a {
   color: black
 }
 
-a:hover {
+.div.grid-item:hover {
   background: yellow;
 
 }
@@ -65,15 +79,7 @@ main {
 
 }
 
-.letters  {
-font-size: 1.1em;
-display: flex;
-font-family: 'Source Sans Pro', sans-serif;
-background-color: white !important;
-text-transform: uppercase;
 
-
-}
 
 
 .grid-container {
@@ -87,7 +93,8 @@ div.grid {
   grid-column: 1;
 grid-row: 2;
   justify-self: start;
-  margin: 50px;
+  margin-left: 20px;
+  margin-right: 50px;
   width: 465px;
  height: 465px;
   display: flex;
@@ -105,7 +112,9 @@ justify-content: center;
 background-color: black;
 }
 
-div.grid-item
+/* div.letters:hover {
+    background: #ffe500;
+} */
 
 
 
@@ -129,19 +138,31 @@ section.clues {
   justify-content: center;
 font-size: 32pt;
 grid-row: 2;
-padding: 2em;
+align-content: start;
   display: grid;
   grid-column: 2;
   grid-template-columns: repeat(2, 50%);
-
   font-size: 0.875em;
-    line-height: 1.375em;
-    font-size: 0.875rem;
+
+    font-size: 0.8rem;
 line-height: 1.375rem;
  font-family: font-family: 'Open Sans', sans-serif;
  font-weight: lighter;
 
 
+}
+h5 {
+  display: inline;
+  padding: 1em;
+}
+
+p {
+  display: inline;
+
+}
+
+.clue-container {
+  padding: 0.8em;
 }
 
 .control-buttons {
@@ -247,4 +268,14 @@ fill: #bb3b80;
 .u-unstyled, .inline-list, .linkslist, li {
     margin: 0;
     list-style: none;
+  }
+
+  div.letters  {
+  font-size: 1.1em;
+  display: flex;
+  font-family: 'Source Sans Pro', sans-serif;
+  background-color: white ;
+  text-transform: uppercase;
+
+
   }

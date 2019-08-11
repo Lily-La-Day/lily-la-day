@@ -4,6 +4,9 @@ const squares = []
 
 
 
+
+
+
 const answers = [
   'strangerthings',
   'snake',
@@ -15,7 +18,13 @@ const answers = [
   'aboutme',
   'bangemployed',
   'github',
-  'linkedin'
+  'linkedin',
+  'instagram',
+  'youtube',
+  'webdeveloper',
+  'bangemployed',
+  'generalassembly',
+  'ajob'
 ]
 
 
@@ -28,19 +37,32 @@ const links = {
   beatlemaniacs: 'https://github.com/Lily-La-Day/beatle-maniacs',
   strangerthings: 'https://github.com/Lily-La-Day/sei-group-project-forked',
   haikuwho: 'https://github.com/Lily-La-Day/haiku-who',
-  amiwrite: 'https://github.com/Lily-La-Day/project-four'
+  amiwrite: 'https://github.com/Lily-La-Day/project-four',
+  instagram: 'https://www.instagram.com/lily.la.day/',
+  youtube: 'https://www.youtube.com/watch?v=VEcnOu2jfKY',
+  aboutme: '#',
+  webdeveloper: 'https://en.wikipedia.org/wiki/Web_developer',
+  bangemployed: 'https://bang-employed.com',
+  generalassembly: 'https://generalassemb.ly/education/software-engineering-immersive/london'
 }
 
 const clues = {
   linkedin: 'The very worst of the online places.',
   github: 'One of my very favourite online places',
-  tetris: 'My first proper project and with it, my first proper struggle! (An attempt at making) a Tetris clone using good old Vanilla JavaSCript',
+  tetris: 'My first proper project and with it, my first proper struggle! (An attempt at making) a Tetris clone using good old Vanilla JavaScript',
   snake: 'My favourite game as a child (and [sort of] my second project), another very basic game made by a (then) very inexperienced coder using Vanilla JS',
   whodat: 'My third project, lots of firsts- working in a group, with React and playing with an API!',
   beatlemaniacs: 'Where else would you find a database of Beatles songs? Thank god someone (ie. me) finally went and made one! I\'m pretty sure this info was impossible to come by until now. (My first fullstack MERN application)',
   strangerthings: 'The big group project, another very original idea and another fullstack MERN application. ',
   haikuwho: 'A lovely little database of haiku portraits (made by me obviously), first time playing with Python and Flask for the backend',
-  amiwrite: 'The big final project, a solo effort built over a week (a bloody sweaty, not quite tear-y week) , a full stack Python, Flask, React application.'
+  amiwrite: 'The big final project, a solo effort built over a week (a bloody sweaty, not quite tear-y week) , a full stack Python, Flask, React application.',
+  instagram: 'Paintings of faces that I have done.',
+  youtube: 'A very short (but quite good!) video about one of my art projects.',
+  webdeveloper: 'What I am.',
+  bangemployed: 'Also what I am (for now). Also the name of my new code blog/unemployment tracker. (I haven\'t actually started this yet but I promise that it\'s next on my list after this crossword).',
+  generalassembly: 'Software Engineering Immersive- the coding "bootcamp" I have just completed (and miss a bit).',
+  ajob: 'What I would like... preferably one that involves coding. And if I\'m being really picky, as little styling as possible. I\'m fullstack (with emphasis on the full).',
+  aboutme: 'Sometimes I run quite far.'
 }
 
 
@@ -70,6 +92,19 @@ const init = () => {
 
     }
   }
+
+  const date = document.querySelector('.date')
+  const now = new Date()
+  const weekday = new Array('Sun', 'Mon', 'Tues', 'Wed', 'Thurs', 'Fri', 'Sat')
+  const months = new Array('January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December')
+  const month = months[now.getMonth()]
+  const dayOfWeek = weekday[now.getDay()]
+  const dd = String(now.getDate()).padStart(2, '0')
+
+  const yyyy = now.getFullYear()
+  const time = `${now.getHours()}. ${now.getMinutes()}`
+  date.innerHTML = `${dayOfWeek} ${dd} ${month} ${yyyy} ${time} BST `
+
   const makeClues = () => {
     const clueSection = document.querySelector('.clues')
     clueSection.style.gridTemplateRows = (`repeat(${answers.length}, auto)`)
@@ -107,8 +142,22 @@ const init = () => {
 
       document.querySelector(`[data-index="${i}"]`).classList.add('letters')
       document.querySelector(`[data-index="${i}"]`).classList.add(clue)
+      const clueNodes = document.querySelectorAll(`.${clue}`)
 
+      clueNodes.forEach(clueNode => {
+        const background = () => {
+          const all = document.querySelectorAll(`.${clue}`)
+          all.forEach(el => el.style.backgroundColor = '#ffe500')
+        }
+        const remove = () => {
+          const all = document.querySelectorAll(`.${clue}`)
+          all.forEach(el => el.style.backgroundColor = '')
+        }
 
+        clueNode.addEventListener('mouseover', background )
+        clueNode.addEventListener('mouseout', remove)
+
+      })
     }
 
   }
@@ -213,3 +262,10 @@ const init = () => {
 
 
 window.addEventListener('DOMContentLoaded', init)
+
+
+
+// const css = `.${clue}:hover{ background-color: #ffe500 }`
+// const style = document.createElement('style')
+// style.appendChild(document.createTextNode(css))
+// document.querySelector(`.${clue}`).appendChild(style)
