@@ -22,12 +22,14 @@ height: auto;
 }
 
 .setter {
-    font-family: Merriweather, serif;
+line-height: 0.2em;
+font-family: Merriweather, serif;
 color: #bb3b80;
+display: inline;
+
+
 }
-.icons{
-  padding-top: 0.5em;
-}
+
 
 
 .italic {
@@ -35,11 +37,13 @@ font-style: italic;
 }
 
 .icons {
-  display: flex;
+  padding-top: -2em;
+  display: inline-flex;;
 }
 
 .circle:hover {
   background-color: #bb3b80;
+
 
   }
 svg:hover{
@@ -55,11 +59,27 @@ a {
 
 }
 
-.small-heading {
+.direction {
+  font-weight: 800;
+  margin-top: 0;
+
+}
+
+.small-heading, .direction {
   font-family: Merriweather, serif;
 }
 h1 {
+  margin-top: 0;
   font-family: Merriweather, serif;
+}
+
+.date {
+  height: 0.2em;
+  font-size: 0.75rem;
+  line-height: 0em;
+    font-family: "Guardian Text Sans Web","Helvetica Neue",Helvetica,Arial,"Lucida Grande",sans-serif;
+    position: relative;
+    color: #767676;
 }
 
 h3 {
@@ -91,7 +111,7 @@ main {
 
 div.grid {
   grid-column: 1;
-grid-row: 2;
+grid-row: 1;
   justify-self: start;
   margin-left: 20px;
   margin-right: 50px;
@@ -124,20 +144,29 @@ background-color: black;
 
 }
 
+/* [class*="-clue"]:hover {
+  font-weight: bold;
+} */
+
 #tiny {
   vertical-align: super;
-  font-size: 0.3em;
+  font-size: 0.5em;
   margin-top: 0;
   padding-left: 0.3em;
 display: block;
   font-family: 'Source Sans Pro', sans-serif;
-  color: black;
+  color: red;
+  display: none;
+}
+
+h3 {
+  font-size: 0.8em;
 }
 
 section.clues {
   justify-content: center;
 font-size: 32pt;
-grid-row: 2;
+grid-row: 1;
 align-content: start;
   display: grid;
   grid-column: 2;
@@ -162,7 +191,7 @@ p {
 }
 
 .clue-container {
-  padding: 0.8em;
+  padding: 0.3em;
 }
 
 .control-buttons {
@@ -225,16 +254,17 @@ fill: #bb3b80;
 }
 
 .circle {
-  padding-top: 0.3em;
+  padding-top: 0.1em;
   display: flex;
   flex-wrap: nowrap;
-  height: 2.8em;
-  width: 2.8em;
+  height: 2.2em;
+  width: 2.2em;
   border-radius: 50%;
   border: 0.0625rem solid #dcdcdc;
   justify-content: center;
   align-content: center;
   margin: 0.3em;
+  margin-bottom: 0.5em;
 }
 
 .centered-icon svg {
