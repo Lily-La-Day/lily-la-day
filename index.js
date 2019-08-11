@@ -20,7 +20,7 @@ const answers = [
   'whodat',
   'aboutme',
   // 'bangemployed',
-  
+
   'linkedin',
   'insta',
   'youtube',
@@ -126,24 +126,7 @@ const init = () => {
       clue.append(tiny)
       tiny.setAttribute('id', 'tiny')
       clueSection.style.height = '80vh'
-      clue.addEventListener('mouseover', () => {
-        const all = document.querySelectorAll('*')
-        all.forEach(el => {
-          if(el.classList.contains(clue.childNodes[1].classList[0].split('-')[0])) {
-            el.style.backgroundColor = '#ffe500'
 
-          }
-        })
-      })
-      clue.addEventListener('mouseout', () => {
-        const all = document.querySelectorAll('*')
-        all.forEach(el => {
-          if(el.classList.contains(clue.childNodes[1].classList[0].split('-')[0])) {
-            el.style.backgroundColor = ''
-
-          }
-        })
-      })
     }
   }
 

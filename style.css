@@ -350,7 +350,12 @@ fill: #bb3b80;
     margin-bottom: 0.75rem;
   }
 
-.button:hover {
+  .crossword__controls .button--primary:hover, .crossword__controls .button--primary:visited, .crossword__controls .button--primary:focus {
+    background-color: #942f65;
+    border-color: #942f65;
+}
+
+.button--primary:hover {
   background: #812958;
   color: black;
 }
@@ -388,4 +393,11 @@ box-sizing: border-box;
   align-content: start;
 margin-top: -2em;
   justify-content: center;
+
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    font-family: "Guardian Text Sans Web","Helvetica Neue",Helvetica,Arial,"Lucida Grande",sans-serif;
+    margin-left: 0.3125rem;
+    font-style: italic;
+
 }
