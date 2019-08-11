@@ -24,7 +24,7 @@ const answers = [
   'linkedin',
   'insta',
   'youtube',
-  'webdeveloper',
+  // 'webdeveloper',
 
   'ajob'
 ]
@@ -44,7 +44,7 @@ const links = {
   youtube: 'https://www.youtube.com/watch?v=VEcnOu2jfKY',
   aboutme: '#',
   webdeveloper: 'https://en.wikipedia.org/wiki/Web_developer',
-  bangemployed: 'https://bang-employed.com',
+  // bangemployed: 'https://bang-employed.com',
   generalassembly: 'https://generalassemb.ly/education/software-engineering-immersive/london',
   ajob: 'mailto:lily.la.day.is@gmail.com?subject=Lily%20I%20Have%20A%20Job%20Offer%20For%20You'
 
@@ -62,7 +62,7 @@ const clues = {
   amiwrite: 'The big final project, a solo effort built over a week (a bloody sweaty, not quite tear-y week) , a full stack Python, Flask, React application.',
   insta: 'Paintings of faces that I have done.',
   youtube: 'A very short (but quite good!) video about one of my art projects.',
-  webdeveloper: 'What I am.',
+  // webdeveloper: 'What I am.',
   generalassembly: 'Software Engineering Immersive- the coding "bootcamp" I have just completed (and miss a bit).',
   ajob: 'What I would like... preferably one that involves coding. And if I\'m being really picky, as little styling as possible. I\'m fullstack (with emphasis on the full).',
   aboutme: 'Sometimes I run quite far.'
