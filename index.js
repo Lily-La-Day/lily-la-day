@@ -15,12 +15,12 @@ const answers = [
   'boa',
   'amiwrite',
   'haikuwho',
-  'beatlemaniacs',
+
   'tetris',
   'whodat',
   'aboutme',
   // 'bangemployed',
-  'github',
+  
   'linkedin',
   'insta',
   'youtube',
@@ -61,7 +61,7 @@ const clues = {
   haikuwho: 'A little database of haiku portraits (made by me [obviously]), first time playing with Python and Flask for the backend.',
   amiwrite: 'The big final project, a solo effort built over a week (a bloody sweaty, not quite tear-y week) , a full stack Python, Flask, React application.',
   insta: 'Paintings of faces that I have done.',
-  youtube: 'A very short (but quite good!) video about one of my art projects.',
+  youtube: 'A very short (but quite good!) video about one of my art projects. (From back when I was art-y rather than tech-y)',
   // webdeveloper: 'What I am.',
   generalassembly: 'Software Engineering Immersive- the coding "bootcamp" I have just completed (and miss a bit).',
   ajob: 'What I would like... preferably one that involves coding. And if I\'m being really picky, as little styling as possible. I\'m fullstack (with emphasis on the full).',
