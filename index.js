@@ -8,7 +8,10 @@ const squares = []
 
 
 const answers = [
+  'generalassembly',
+  'github',
   'strangerthings',
+  'beatlemaniacs',
   'boa',
   'amiwrite',
   'haikuwho',
@@ -22,7 +25,7 @@ const answers = [
   'insta',
   'youtube',
   'webdeveloper',
-  'generalassembly',
+
   'ajob'
 ]
 
@@ -37,12 +40,14 @@ const links = {
   strangerthings: 'https://github.com/Lily-La-Day/sei-group-project-forked',
   haikuwho: 'https://github.com/Lily-La-Day/haiku-who',
   amiwrite: 'https://github.com/Lily-La-Day/project-four',
-  insta: 'https://www.insta.com/lily.la.day/',
+  insta: 'https://www.instagram.com/lily.la.day/',
   youtube: 'https://www.youtube.com/watch?v=VEcnOu2jfKY',
   aboutme: '#',
   webdeveloper: 'https://en.wikipedia.org/wiki/Web_developer',
   bangemployed: 'https://bang-employed.com',
-  generalassembly: 'https://generalassemb.ly/education/software-engineering-immersive/london'
+  generalassembly: 'https://generalassemb.ly/education/software-engineering-immersive/london',
+  ajob: 'mailto:lily.la.day.is@gmail.com?subject=Lily%20I%20Have%20A%20Job%20Offer%20For%20You'
+
 }
 
 const clues = {
@@ -53,7 +58,7 @@ const clues = {
   whodat: 'My third project, lots of firsts- working in a group, with React and playing with an API!',
   beatlemaniacs: 'Where else would you find a database of Beatles songs? Thank god someone (ie. me) finally went and made one! I\'m pretty sure this info was impossible to come by until now. (My first fullstack MERN application)',
   strangerthings: 'The big group project, another very original idea and another fullstack MERN application. ',
-  haikuwho: 'A lovely little database of haiku portraits (made by me obviously), first time playing with Python and Flask for the backend',
+  haikuwho: 'A little database of haiku portraits (made by me [obviously]), first time playing with Python and Flask for the backend.',
   amiwrite: 'The big final project, a solo effort built over a week (a bloody sweaty, not quite tear-y week) , a full stack Python, Flask, React application.',
   insta: 'Paintings of faces that I have done.',
   youtube: 'A very short (but quite good!) video about one of my art projects.',
