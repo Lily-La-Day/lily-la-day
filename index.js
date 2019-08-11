@@ -31,13 +31,13 @@ const links = {
   linkedin: 'https://www.linkedin.com/in/lily-la-day/',
   github: 'https://github.com/Lily-La-Day/',
   tetris: 'https://github.com/Lily-La-Day/sei-project-one-tetris',
-  boa: 'https://github.com/Lily-La-Day/snake',
+  boa: 'https://github.com/Lily-La-Day/boa',
   whodat: 'https://github.com/Lily-La-Day/sei-project-2/',
   beatlemaniacs: 'https://github.com/Lily-La-Day/beatle-maniacs',
   strangerthings: 'https://github.com/Lily-La-Day/sei-group-project-forked',
   haikuwho: 'https://github.com/Lily-La-Day/haiku-who',
   amiwrite: 'https://github.com/Lily-La-Day/project-four',
-  insta: 'https://www.instagram.com/lily.la.day/',
+  insta: 'https://www.insta.com/lily.la.day/',
   youtube: 'https://www.youtube.com/watch?v=VEcnOu2jfKY',
   aboutme: '#',
   webdeveloper: 'https://en.wikipedia.org/wiki/Web_developer',
@@ -106,11 +106,12 @@ const init = () => {
   const makeClues = () => {
     const clueSection = document.querySelector('.clues')
     clueSection.style.gridTemplateRows = (`repeat(${answers.length}, auto)`)
-    const clues = clueSection.style.gridTemplateRows
+    // const clues = clueSection.style.gridTemplateRows
     clueSection.style.gridColumnGap = '2em'
-    const rows = clues.split(' ').length
+    const rows = answers.length
 
     for(let i = 0; i < rows; i ++ ) {
+
       const clue = document.createElement('div')
       clue.classList.add('clue-container')
       clueSection.append(clue)
@@ -223,7 +224,8 @@ const init = () => {
 
   for(let i = 0; i < answers.length; i ++){
     const clue = document.querySelector(`[data-number="${i}"]`)
-    clue.innerHTML = `<h5>${i+1}</h5><p class="${answers[i]}-clue"><a href=''>${clues[answers[i]]}</a></p>`
+    clue.classList.add(`${answers[i]}-clue`)
+    clue.innerHTML = `<h5>${i+1}</h5><p ><a href=''>${clues[answers[i]]}</p></a>`
   }
 
   // 'strangerthings',

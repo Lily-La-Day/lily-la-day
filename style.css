@@ -301,11 +301,14 @@ fill: #bb3b80;
   }
 
   div.letters  {
-  font-size: 1.1em;
+    padding-top: 0.1em;
+    align-content: center;
+  font-size: 1em;
   display: flex;
   font-family: 'Source Sans Pro', sans-serif;
   background-color: white ;
   text-transform: uppercase;
+  font-weight: lighter;
 
 
   }
