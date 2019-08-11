@@ -350,11 +350,34 @@ fill: #bb3b80;
     margin-bottom: 0.75rem;
   }
 
-button:hover {
+.button:hover {
   background: #812958;
   color: black;
 }
 
+.button--secondary {
+color: #767676;
+background: #ededed;
+border: 0.0625rem solid #ededed;
+font-size: 0.8125rem;
+line-height: 1.125rem;
+
+height: 1.875rem;
+padding: 0 0.625rem;
+margin-right: 0.625rem;
+line-height: 1.75rem;
+color: #767676;
+
+display: inline-block;
+vertical-align: top;
+width: auto;
+font-weight: 500;
+text-decoration: none;
+border-radius: 62.5rem;
+border-width: 0.0625rem;
+border-style: solid;
+box-sizing: border-box;
+}
 
 
 .button-container {
