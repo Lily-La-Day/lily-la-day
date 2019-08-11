@@ -2,18 +2,16 @@ const width = 15
 
 const squares = []
 
+
+
 const answers = [
   'strangerthings',
   'snake',
   'amiwrite',
   'haikuwho',
   'beatlemaniacs',
-
   'tetris',
-
   'whodat',
-
-
   'aboutme',
   'bangemployed',
   'github',
@@ -127,7 +125,7 @@ const init = () => {
 
       document.querySelector(`[data-index="${i}"]`).classList.add('letters')
       document.querySelector(`[data-index="${i}"]`).classList.add(clue)
-      if (document.querySelector(`[data-index="${i}"] a`).innerText.length === 2) {
+      if (document.querySelector(`[data-index="${i}"] a`).innerText.length >= 2) {
         const extras = document.querySelector(`[data-index="${i}"] a`)
         extras.innerText = extras.innerText[0]
         console.log(extras)
@@ -146,7 +144,7 @@ const init = () => {
 
   for(let i = 0; i < answers.length; i ++){
     const clue = document.querySelector(`[data-number="${i}"]`)
-    clue.innerHTML = `<h5 class="${answers[i]}-clue">${clues[answers[i]]}</h5>`
+    clue.innerHTML = `<h5>${i+1}</h5><p class="${answers[i]}-clue">${clues[answers[i]]}</p>`
   }
 
 
@@ -159,9 +157,23 @@ const init = () => {
   down('aboutme', 43)
   down('github', 135)
   down('linkedin', 113)
+  down('snake', 6)
+  across('whodat', 189)
+  across('tetris', 66)
+  across('whodat', 138)
+  down('snake', 155)
+  across('tetris', 93)
+  across('amiwrite', 30)
+  across('snake', 145)
+  down('linkedin', 113)
+  across('whodat', 105)
+  down('github', 146)
 
 
-  across('beatlemaniacs', 210)
+  across('haikuwho', 101)
+
+
+
 
   answers.forEach(clue => {
     // console.log(clue)
@@ -173,9 +185,11 @@ const init = () => {
     })
   })
   for(let i = 0; i < width * width; i ++){
-    if (document.querySelector(`[data-index="${i}"] a`).innerText.length === 2) {
+    if (document.querySelector(`[data-index="${i}"] a`).innerText.length >= 2 ) {
       const extras = document.querySelector(`[data-index="${i}"] a`)
+      console.log(extras.innerText)
       extras.innerText = extras.innerText[0]
+
       console.log(extras)
     }
 
