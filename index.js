@@ -15,17 +15,14 @@ const answers = [
   'boa',
   'amiwrite',
   'haikuwho',
-
   'tetris',
   'whodat',
   'aboutme',
   // 'bangemployed',
-
   'linkedin',
   'insta',
   'youtube',
   // 'webdeveloper',
-
   'ajob'
 ]
 
@@ -80,13 +77,14 @@ const init = () => {
       const square = document.createElement('div')
       grid.append(square)
       square.classList.add('grid-item')
-      const a = document.createElement('a')
-      a.href=''
-      square.append(a)
+
       const tiny = document.createElement('p')
       tiny.innerHTML = i
       square.append(tiny)
       tiny.setAttribute('id', 'tiny')
+      const a = document.createElement('a')
+      a.href=''
+      square.append(a)
       square.dataset.index = i
       squares.push(square)
       square.dataset.row = Math.floor(i/15) + 1
@@ -145,15 +143,17 @@ const init = () => {
   const across = (clue, index) => {
     const answer = document.createElement('h6')
     answer.append(clue)
-
+    // console.log(answers.indexOf(clue))
     const letters = answer.innerHTML.split('')
-
+    document.querySelector(`[data-index="${index}"]`).classList.add(index)
+    const clueNodes = document.querySelectorAll(`[class*="${clue}"]`)
     for(let i = index; i < index + clue.length; i ++) {
       document.querySelector(`[data-index="${i}"] a`).append(letters[i-index])
 
       document.querySelector(`[data-index="${i}"]`).classList.add('letters')
       document.querySelector(`[data-index="${i}"]`).classList.add(clue)
-      const clueNodes = document.querySelectorAll(`[class*="${clue}"]`)
+
+
 
       clueNodes.forEach(clueNode => {
         const background = () => {
@@ -170,21 +170,29 @@ const init = () => {
 
       })
     }
+    const firsts = [...document.querySelectorAll(`[class*="${clue}"]`)]
+    // const gridItems = [...document.querySelectorAll('[class*="grid-item"]')]
+    const filtered = firsts.filter(el => el.classList.contains('grid-item'))
 
+    filtered[0].childNodes[0].innerHTML = answers.indexOf(clue)+1
+    filtered[0].childNodes[0].removeAttribute('id', 'tiny')
+    filtered[0].childNodes[0].classList.add('clueNumber')
   }
 
 
   const down = (clue, index) => {
     const answer = document.createElement('h6')
     answer.append(clue)
-
+    // console.log(clue)
     const letters = answer.innerHTML.split('')
+
     for(let i = index; i < index + (15*clue.length) - 14; i +=15) {
 
       document.querySelector(`[data-index="${i}"] a`).append(letters[(index+(i-index)-index)/15])
 
       document.querySelector(`[data-index="${i}"]`).classList.add('letters')
       document.querySelector(`[data-index="${i}"]`).classList.add(clue)
+
       const clueNodes = document.querySelectorAll(`[class*="${clue}"]`)
 
       clueNodes.forEach(clueNode => {
@@ -205,6 +213,12 @@ const init = () => {
 
 
     }
+    const firsts = [...document.querySelectorAll(`[class*="${clue}"]`)]
+    // const gridItems = [...document.querySelectorAll('[class*="grid-item"]')]
+    const filtered = firsts.filter(el => el.classList.contains('grid-item'))
+    filtered[0].childNodes[0].innerHTML = answers.indexOf(clue)+1
+    filtered[0].childNodes[0].removeAttribute('id', 'tiny')
+    filtered[0].childNodes[0].classList.add('clueNumber')
 
 
   }
@@ -250,7 +264,7 @@ const init = () => {
   across('amiwrite', 210)
   down('tetris', 149)
   down('boa', 37)
-  across('game', 84)
+
 
 
 
@@ -263,7 +277,7 @@ const init = () => {
   answers.forEach(clue => {
     // console.log(clue)
     const els = document.querySelectorAll(`[class*="${clue}"]`)
-    console.log(links[clue])
+
     els.forEach(el => {
       el.querySelector('a').href = links[clue]
 
@@ -272,10 +286,7 @@ const init = () => {
   for(let i = 0; i < width * width; i ++){
     if (document.querySelector(`[data-index="${i}"] a`).innerText.length >= 2 ) {
       const extras = document.querySelector(`[data-index="${i}"] a`)
-      console.log(extras.innerText)
       extras.innerText = extras.innerText[0]
-
-      console.log(extras)
     }
 
 

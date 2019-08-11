@@ -349,6 +349,31 @@ fill: #bb3b80;
       line-height: 1.375rem;
     margin-bottom: 0.75rem;
   }
+  .clueNumber {
+flex-flow: nowrap;
+margin-left: -1em;
+
+
+    font-size: 0.4em;
+    margin-top: 0;
+
+  display: flex;
+    font-family: 'Source Sans Pro', sans-serif;
+    color:black
+  }
+
+  .clueNumberTwo {
+flex-flow: nowrap;
+margin-left: -1em;
+
+
+    font-size: 0.4em;
+    margin-bottom: 0;
+
+  display: flex;
+    font-family: 'Source Sans Pro', sans-serif;
+    color:black
+  }
 
   .crossword__controls .button--primary:hover, .crossword__controls .button--primary:visited, .crossword__controls .button--primary:focus {
     background-color: #942f65;
