@@ -3,6 +3,7 @@
 * {
   box-sizing: border-box;
   text-decoration: none;
+  outline: none !important;
 }
 
 html, body {
@@ -312,3 +313,56 @@ fill: #bb3b80;
 
 
   }
+
+  .crossword__controls {
+      margin-top: 0.75rem;
+      float: left;
+      clear: both;
+  }
+
+  .crossword__controls .button--primary {
+      background: #bb3b80;
+      border: 0.0625rem solid #bb3b80;
+
+      font-size: 0.8125rem;
+  line-height: 1.125rem;
+
+  height: 1.875rem;
+  padding: 0 0.625rem;
+  margin-right: 0.625rem;
+  line-height: 1.75rem;
+  color: #fff;
+
+  display: inline-block;
+  vertical-align: top;
+  width: auto;
+  font-weight: 500;
+  text-decoration: none;
+  border-radius: 62.5rem;
+  border-width: 0.0625rem;
+  border-style: solid;
+  box-sizing: border-box;
+  }
+
+  .crossword__controls .button {
+      font-size: 0.875rem;
+      line-height: 1.375rem;
+    margin-bottom: 0.75rem;
+  }
+
+button:hover {
+  background: #812958;
+  color: black;
+}
+
+
+
+.button-container {
+  position: relative;
+     z-index: -1;
+  display: grid;
+  grid-row: 3;
+  align-content: start;
+margin-top: -2em;
+  justify-content: center;
+}
