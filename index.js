@@ -380,6 +380,14 @@ const init = () => {
   }
 
 
+  const email = document.querySelector('.email')
+  const twitter = document.querySelector('.twitter')
+  const facebook = document.querySelector('.facebook')
+
+
+  email.addEventListener('click',  )
+
+
 
 
 
