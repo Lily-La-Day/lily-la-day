@@ -292,6 +292,28 @@ const init = () => {
 
   }
 
+  const crossword = document.querySelector('.crossword')
+  const expo = document.querySelector('button')
+  const info = document.querySelector('.info')
+
+  const click = document.querySelector('.click')
+  const you = document.querySelector('.you')
+  const understand = document.querySelector('.understand')
+  const what = document.querySelector('.what')
+
+  crossword.addEventListener('mouseover', () => {
+    console.log('mousing')
+    click.innerHTML = 'Click Here'
+    you.innerHTML = 'If You'
+    understand.innerHTML = 'Don\'t Understand'
+    what.innerHTML = 'What This Is'
+  })
+
+  expo.addEventListener('click', () => {
+    console.log('clicking')
+    info.style.display = 'inline-block'
+  })
+
 
 
 
