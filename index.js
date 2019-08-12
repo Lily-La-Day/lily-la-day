@@ -336,7 +336,8 @@ const init = () => {
   const guardian = document.querySelector('.me')
 
   buttons.addEventListener('click', () => {
-    console.log('clicking')
+
+
     info.style.display = 'inline-block'
     reverseText()
     console.log(guardian.innerHTML)
@@ -344,7 +345,7 @@ const init = () => {
       console.log('doing')
       clearInterval(change)
       clearInterval(reverse)
-      setTimeout(handler, 1000)
+      setInterval(handler, 1000)
       guardian.classList.add('fade')
       setInterval(changeGuardian, 2000)
     } else {
@@ -366,10 +367,16 @@ const init = () => {
 
   }
 
+  const noDisplay = () => {
+    info.style.display = 'none'
+  }
+
 
   const hide = () => {
-    guardian.classList.remove('fade')
-    info.style.display = 'none'
+  
+    guardian.classList.add('fade')
+    setTimeout(noDisplay, 500)
+
   }
 
 

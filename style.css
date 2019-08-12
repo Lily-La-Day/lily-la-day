@@ -528,7 +528,7 @@ box-sizing: border-box;
 .fade {
   opacity: 1;
   animation: fade 2s linear;
-  
+
 }
 
 /* @-webkit-keyframes fadeinout {
@@ -542,3 +542,10 @@ box-sizing: border-box;
   50% { opacity: 0.5; }
   100% { opacity: 0; }
 } */
+.direction {
+
+padding-top: 0.3em;
+border-top: 0.0625rem solid #bb3b80;
+border-bottom: 0.0625rem dotted #dcdcdc;
+padding-bottom: 0.5625rem;
+}
