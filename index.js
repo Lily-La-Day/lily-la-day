@@ -154,7 +154,7 @@ const init = () => {
       document.querySelector(`[data-index="${i}"]`).classList.add(clue)
 
 
-
+      const clueNodes = document.querySelectorAll(`[class*="${clue}"]`)
       clueNodes.forEach(clueNode => {
         const background = () => {
           const all = document.querySelectorAll(`[class*="${clue}"]`)
@@ -373,7 +373,7 @@ const init = () => {
 
 
   const hide = () => {
-  
+
     guardian.classList.add('fade')
     setTimeout(noDisplay, 500)
 
