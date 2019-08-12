@@ -508,10 +508,10 @@ box-sizing: border-box;
 }
 
 
-.component-button__content {
+/* .component-button__content {
     opacity: 1;
     animation: fade 2s linear;
-}
+} */
 
 .contributions__adblock-button:hover {
   background: #812958;
@@ -520,15 +520,15 @@ box-sizing: border-box;
 
 
 @keyframes fade {
-  0% { opacity: 0; }
+  0% { opacity: 1; }
   50% { opacity: 0.5; }
-  100% { opacity: 1; }
+  100% { opacity: 0; }
 }
 
 .fade {
-
-    -webkit-animation: fadeinout 3s linear forwards;
-    animation: fadeinout 3s linear forwards;
+  opacity: 1;
+  animation: fade 2s linear;
+  
 }
 
 /* @-webkit-keyframes fadeinout {

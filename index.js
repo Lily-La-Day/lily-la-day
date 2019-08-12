@@ -332,33 +332,44 @@ const init = () => {
 
     })
   })
+  const main = document.querySelector('.heading-area')
   const guardian = document.querySelector('.me')
 
-  buttons.addEventListener('dblclick', () => {
+  buttons.addEventListener('click', () => {
     console.log('clicking')
     info.style.display = 'inline-block'
     reverseText()
-    clearInterval(change)
-    clearInterval(reverse)
-    document.addEventListener('click', hide)
-    // guardian.classList.add('fade')
-
-    setInterval(changeGuardian, 4000)
+    console.log(guardian.innerHTML)
+    if(guardian.innerText === 'Guardian'){
+      console.log('doing')
+      clearInterval(change)
+      clearInterval(reverse)
+      setTimeout(handler, 1000)
+      guardian.classList.add('fade')
+      setInterval(changeGuardian, 2000)
+    } else {
+      guardian.classList.remove('fade')
+    }
 
   })
+  const handler = () => {
+
+    main.addEventListener('click', hide)
+  }
+
 
 
   const changeGuardian = () => {
-    guardian.classList.add('fade')
+
     guardian.innerText = 'Lily'
-    
+
 
   }
 
 
   const hide = () => {
+    guardian.classList.remove('fade')
     info.style.display = 'none'
-    guardian.innerText = 'Guardian'
   }
 
 
