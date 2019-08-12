@@ -293,7 +293,9 @@ const init = () => {
   }
 
   const crossword = document.querySelector('.crossword')
-  const expo = document.querySelector('button')
+  const expo = document.querySelectorAll('button')
+  const buttons = document.querySelector('.button-container')
+
   const info = document.querySelector('.info')
 
   const click = document.querySelector('.click')
@@ -301,18 +303,65 @@ const init = () => {
   const understand = document.querySelector('.understand')
   const what = document.querySelector('.what')
 
-  crossword.addEventListener('mouseover', () => {
-    console.log('mousing')
+  const changeText = () =>  {
+
     click.innerHTML = 'Click Here'
     you.innerHTML = 'If You'
     understand.innerHTML = 'Don\'t Understand'
     what.innerHTML = 'What This Is'
-  })
+  }
 
-  expo.addEventListener('click', () => {
+  const reverseText = () =>  {
+
+    click.innerHTML = 'Check This'
+    you.innerHTML = 'Reveal This'
+    understand.innerHTML = 'Clear This'
+    what.innerHTML = 'Anagram Helper'
+  }
+
+  const change = setInterval(changeText, 5000)
+  const reverse = setInterval(reverseText, 10000)
+
+
+  expo.forEach(button =>{
+    console.log(button)
+    button.addEventListener('onclick', () => {
+      console.log('clicking')
+      info.style.display = 'inline-block'
+
+
+    })
+  })
+  const guardian = document.querySelector('.me')
+
+  buttons.addEventListener('dblclick', () => {
     console.log('clicking')
     info.style.display = 'inline-block'
+    reverseText()
+    clearInterval(change)
+    clearInterval(reverse)
+    document.addEventListener('click', hide)
+    // guardian.classList.add('fade')
+
+    setInterval(changeGuardian, 4000)
+
   })
+
+
+  const changeGuardian = () => {
+    guardian.classList.add('fade')
+    guardian.innerText = 'Lily'
+    
+
+  }
+
+
+  const hide = () => {
+    info.style.display = 'none'
+    guardian.innerText = 'Guardian'
+  }
+
+
 
 
 

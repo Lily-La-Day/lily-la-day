@@ -384,6 +384,7 @@ margin-left: -1em;
   display: none;
   /* display: inline-block; */
   float: right;
+  width: 40%;
 
 
 }
@@ -426,7 +427,7 @@ box-sizing: border-box;
 
 .button-container {
   position: relative;
-     z-index: -1;
+     /* z-index: -1; */
   display: grid;
   grid-row: 3;
   align-self:start;
@@ -440,3 +441,104 @@ box-sizing: border-box;
     font-style: italic;
 
 }
+
+
+.contributions__adblock .contributions__adblock-header {
+    padding-left: 0.625rem;
+    padding-top: 0.1875rem;
+}
+
+.contributions__adblock .contributions__adblock-content {
+    border-top: 0.3125rem solid #ffe500;
+    margin-right: 1.25rem;
+    background-color: white;
+    padding: 1em;
+    z-index: 1;
+}
+
+.contributions__adblock {
+    position: absolute;
+    top: 0;
+    padding-top: 0.375rem;
+    display: flex;
+    justify-content: flex-end;
+
+    font-family: Merriweather, serif;
+}
+
+.contributions__adblock .contributions__adblock-header h2 {
+    /* font-size: 2.125rem;
+    line-height: 2.375rem; */
+    font-family: Merriweather, serif;
+    font-weight: normal;
+    font-weight: 700;
+    font-family: Merriweather, serif;
+}
+
+.contributions__adblock .contributions__adblock-button {
+    margin-top: 0.625rem;
+    margin-left: 0.3125rem;
+    background-color: #ffe500;
+    color: #121212 !important;
+    font-size: 1rem;
+    line-height: 1.375rem;
+    font-family: Merriweather, serif;
+
+    display: inline-flex;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    text-decoration: none;
+    font-weight: bold;
+    height: 2.625rem;
+    min-height: 2.625rem;
+    padding: 0 1.3125rem;
+    border-radius: 1.3125rem;
+    box-sizing: border-box;
+    cursor: pointer;
+    transition: .3s ease-in-out;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    position: relative;
+}
+
+.info {
+  display: none;
+}
+
+
+.component-button__content {
+    opacity: 1;
+    animation: fade 2s linear;
+}
+
+.contributions__adblock-button:hover {
+  background: #812958;
+  color: white;
+}
+
+
+@keyframes fade {
+  0% { opacity: 0; }
+  50% { opacity: 0.5; }
+  100% { opacity: 1; }
+}
+
+.fade {
+
+    -webkit-animation: fadeinout 3s linear forwards;
+    animation: fadeinout 3s linear forwards;
+}
+
+/* @-webkit-keyframes fadeinout {
+  0% { opacity: 1; }
+  50% { opacity: 0.5; }
+  100% { opacity: 0; }
+}
+
+@keyframes fadeinout {
+  0% { opacity: 1; }
+  50% { opacity: 0.5; }
+  100% { opacity: 0; }
+} */
