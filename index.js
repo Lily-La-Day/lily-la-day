@@ -31,7 +31,7 @@ const links = {
   linkedin: 'https://www.linkedin.com/in/lily-la-day/',
   github: 'https://github.com/Lily-La-Day/',
   tetris: 'https://github.com/Lily-La-Day/sei-project-one-tetris',
-  boa: 'https://github.com/Lily-La-Day/boa',
+  boa: 'https://github.com/Lily-La-Day/snake',
   whodat: 'https://github.com/Lily-La-Day/sei-project-2/',
   beatlemaniacs: 'https://github.com/Lily-La-Day/beatle-maniacs',
   strangerthings: 'https://github.com/Lily-La-Day/sei-group-project-forked',
@@ -324,9 +324,9 @@ const init = () => {
 
 
   expo.forEach(button =>{
-    console.log(button)
+    // console.log(button)
     button.addEventListener('onclick', () => {
-      console.log('clicking')
+      // console.log('clicking')
       info.style.display = 'inline-block'
 
 
@@ -340,9 +340,9 @@ const init = () => {
 
     info.style.display = 'inline-block'
     reverseText()
-    console.log(guardian.innerHTML)
+    // console.log(guardian.innerHTML)
     if(guardian.innerText === 'Guardian'){
-      console.log('doing')
+      // console.log('doing')
       clearInterval(change)
       clearInterval(reverse)
       setInterval(handler, 1000)
@@ -380,12 +380,12 @@ const init = () => {
   }
 
 
-  const email = document.querySelector('.email')
-  const twitter = document.querySelector('.twitter')
-  const facebook = document.querySelector('.facebook')
+  // const email = document.querySelector('.email')
+  // const twitter = document.querySelector('.twitter')
+  // const facebook = document.querySelector('.facebook')
 
 
-  email.addEventListener('click',  )
+
 
 
 
