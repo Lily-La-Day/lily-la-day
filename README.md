@@ -2,7 +2,7 @@
 
 **(my portfolio)**
 
-There's not too much to say about this by way of an introduction other than maybe to state that I am really into cryptic crossword and pre-bootcamp would (attempt to) do one daily, the Guardian one to be specific, and online always so that I could check things (ie cheat). 
+There's not too much to say about this by way of an introduction other than maybe to state that I am really into cryptic crosswords and pre-bootcamp would (attempt to) do one daily, the Guardian one to be specific, and online always so that I could check things (ie cheat). 
 
 Crossword-ing was one of the many enjoyable life things that I put a pin in while I was at code school, crossword-ing along with reading, cooking, socialising, dating, Samaritan-ing and well, I suppose just having a life outside of code. So now that code school is over I'm attempting to take the pins out, I'm finding this surprisingly hard. Coding is quite addictive and it's pretty much all I want to be doing right now as I am learning fast and learning is fun (yes, that's right kids). 
 
