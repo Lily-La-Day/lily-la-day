@@ -98,13 +98,13 @@ const makeClues = () => {
   }
 ```
 
-The biggest challenge I faced and one I haven't really properly overcome yet is that of getting the numbers to properly correspond with the clues, at the moment I'm using the indexes of the clues as they are stored in an array but obviously this doesn't allow for two clues having the same number (as they would in a real crossword) and I have chosen not to display both numbers in each box in the crossword. I hope the highlighting goes some way to mitigating the annoyingness of this but it's still something I wish to sort out. 
+The biggest challenge I faced and one I haven't really quite overcome yet is that of getting the numbers to properly correspond with the clues, at the moment I'm using the indexes of the clues as they are stored in an array but obviously this doesn't allow for two clues having the same number (as they would in a real crossword) and I have chosen not to display both numbers in each box in the crossword. I hope the highlighting goes some way to mitigating the annoyingness of this but it's still something I wish to sort out. 
 
 Which leads me to that **Improvements and Future Revisions** section. 
 
 I really want to refactor my code entirely so that I don't have seperate clues, answers and links in my code but rather an object for each with these things as keys. This way I could also add numbers. This will have to wait though as it will involve a bit of detangling in places where I have used the array indexes etc. 
 
-My favourite bit is what happens when you click on a jobs so I'm just going to put a screen shot of that here even though it was in no way technically challenging to achieve (I do hope somebody takes it seriously and emails me though) 
+My favourite bit is what happens when you click on "a job" so I'm just going to put a screen shot of that here even though it was in no way technically challenging to achieve (I do hope somebody takes it seriously and emails me though) 
 
 
 
