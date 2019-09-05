@@ -3,10 +3,6 @@ const width = 15
 const squares = []
 
 
-
-
-
-
 const answers = [
   'generalassembly',
   'github',
@@ -146,7 +142,7 @@ const init = () => {
     // console.log(answers.indexOf(clue))
     const letters = answer.innerHTML.split('')
     document.querySelector(`[data-index="${index}"]`).classList.add(index)
-    const clueNodes = document.querySelectorAll(`[class*="${clue}"]`)
+
     for(let i = index; i < index + clue.length; i ++) {
       document.querySelector(`[data-index="${i}"] a`).append(letters[i-index])
 
@@ -171,7 +167,7 @@ const init = () => {
       })
     }
     const firsts = [...document.querySelectorAll(`[class*="${clue}"]`)]
-    // const gridItems = [...document.querySelectorAll('[class*="grid-item"]')]
+
     const filtered = firsts.filter(el => el.classList.contains('grid-item'))
 
     filtered[0].childNodes[0].innerHTML = answers.indexOf(clue)+1
@@ -183,13 +179,12 @@ const init = () => {
   const down = (clue, index) => {
     const answer = document.createElement('h6')
     answer.append(clue)
-    // console.log(clue)
+
     const letters = answer.innerHTML.split('')
 
     for(let i = index; i < index + (15*clue.length) - 14; i +=15) {
 
       document.querySelector(`[data-index="${i}"] a`).append(letters[(index+(i-index)-index)/15])
-
       document.querySelector(`[data-index="${i}"]`).classList.add('letters')
       document.querySelector(`[data-index="${i}"]`).classList.add(clue)
 
@@ -214,7 +209,6 @@ const init = () => {
 
     }
     const firsts = [...document.querySelectorAll(`[class*="${clue}"]`)]
-    // const gridItems = [...document.querySelectorAll('[class*="grid-item"]')]
     const filtered = firsts.filter(el => el.classList.contains('grid-item'))
     filtered[0].childNodes[0].innerHTML = answers.indexOf(clue)+1
     filtered[0].childNodes[0].removeAttribute('id', 'tiny')
@@ -229,24 +223,6 @@ const init = () => {
     clue.classList.add(`${answers[i]}-clue`)
     clue.innerHTML = `<h5>${i+1}</h5><p ><a href=''>${clues[answers[i]]}</p></a>`
   }
-
-  // 'strangerthings',
-  // 'boa',
-  // 'amiwrite',
-  // 'haikuwho',
-  // 'beatlemaniacs',
-  // 'tetris',
-  // 'whodat',
-  // 'aboutme',
-  // 'bangemployed',
-  // 'github',
-  // 'linkedin',
-  // 'insta',
-  // 'youtube',
-  // 'webdeveloper',
-
-  // 'generalassembly',
-  // 'ajob'
 
   down('strangerthings', 9)
   // down('webdeveloper', 45)
@@ -292,7 +268,7 @@ const init = () => {
 
   }
 
-  const crossword = document.querySelector('.crossword')
+
   const expo = document.querySelectorAll('button')
   const buttons = document.querySelector('.button-container')
 
@@ -302,6 +278,8 @@ const init = () => {
   const you = document.querySelector('.you')
   const understand = document.querySelector('.understand')
   const what = document.querySelector('.what')
+  const crossword = document.querySelector('.crossword')
+  const about = document.querySelector('.about')
 
   const changeText = () =>  {
 
@@ -340,9 +318,9 @@ const init = () => {
 
     info.style.display = 'inline-block'
     reverseText()
-    // console.log(guardian.innerHTML)
+
     if(guardian.innerText === 'Guardian'){
-      // console.log('doing')
+
       clearInterval(change)
       clearInterval(reverse)
       setInterval(handler, 1000)
@@ -379,10 +357,46 @@ const init = () => {
 
   }
 
+  const showBio = document.querySelector('.show-bio')
+  console.log(showBio)
+  const showCross = document.querySelector('.show-crossword')
+  console.log(showCross)
+  const bio = document.querySelector('.bio')
 
-  // const email = document.querySelector('.email')
-  // const twitter = document.querySelector('.twitter')
-  // const facebook = document.querySelector('.facebook')
+  const getSetter = () => {
+
+
+
+    crossword.style.display = 'none'
+    bio.style.display = 'block'
+    showBio.style.display = 'none'
+    showCross.style.display = 'block'
+
+
+  }
+
+  const showCrossword = () => {
+
+
+    crossword.style.display = 'block'
+    bio.style.display = 'none'
+    showBio.style.display = 'block'
+    showCross.style.display = 'none'
+
+
+  }
+
+
+
+
+
+  showBio.addEventListener('click', getSetter)
+  showCross.addEventListener('mouseover', showCrossword)
+
+
+
+
+
 
 
 
