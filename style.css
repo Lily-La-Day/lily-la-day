@@ -651,7 +651,7 @@ nav {
     display: grid;
     grid-template-rows:  75% 23% 1%;
     grid-template-columns: 5% 60% 30% 5%;
-width: 100%;
+width: 100vw;
 justify-content: center;
 align-items: center;
 
@@ -670,7 +670,7 @@ align-items: center;
   color: #fff;
   cursor: pointer;
   padding-left: 0.5rem;
-font-size: 1.2em;
+
   padding-right: 0.5rem;
 /* align-self: baseline;
   font-size: 1.2rem;
@@ -1234,17 +1234,6 @@ grid-row: 3 !important;
 
 }
 
-/* @-webkit-keyframes fadeinout {
-  0% { opacity: 1; }
-  50% { opacity: 0.5; }
-  100% { opacity: 0; }
-}
-
-@keyframes fadeinout {
-  0% { opacity: 1; }
-  50% { opacity: 0.5; }
-  100% { opacity: 0; }
-} */
 .direction {
 
 padding-top: 0.3em;
