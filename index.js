@@ -5,12 +5,10 @@ const squares = [];
 const answers = [
   "generalassembly",
   "github",
-  // "strangerthings",
   "snake",
   "amiwrite",
   "haikuwho",
   "dog",
-  // "tetris",
   "whodat",
   "aboutme",
   "linkedin",
@@ -93,6 +91,7 @@ const init = () => {
       tiny.setAttribute("id", "tiny");
       const a = document.createElement("a");
       a.href = "";
+      a.setAttribute('target', '_blank');
       square.append(a);
       square.dataset.index = i;
       squares.push(square);
