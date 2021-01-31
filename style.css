@@ -31,7 +31,9 @@ body {
 }
 
 .myName {
-  margin-bottom: 15px;
+  margin-top: -35px;
+  margin-bottom: 150px;
+
 }
 
 html,
@@ -60,18 +62,10 @@ body:after {
   content: 'mobile';
 }
 
-
-element.style {}
-
 @media (min-width: 30em) .pillars {
   padding-left: 1.25rem;
 }
 
-/* .pillars {
-    clear: right;
-    margin: 0;
-    padding: 0 0 0 0.625rem;
-} */
 nav ul,
 nav ol {
   list-style: none;
@@ -529,8 +523,8 @@ img {
 }
 
 .index-page-header__title {
-  line-height: 90%;
-  padding: 5%;
+  line-height: 98%;
+  padding: 2%;
 }
 
 .fc-item__meta {
@@ -649,7 +643,7 @@ nav {
 
 }
 
-.developer {
+.big-title {
   /* display: grid; */
   grid-row: 1;
 }
@@ -1203,8 +1197,8 @@ div.letters {
 .top {
   height: 40%;
   display: grid;
-  grid-template-rows: 30% 30% 30%;
-  grid-row-gap: 5%;
+  grid-template-rows: 40% 30% 30%;
+  grid-row-gap: 6%;
   margin-bottom: 3em;
 }
 
@@ -1345,6 +1339,16 @@ header.new-header.pillar-scheme-- {
 .the {
   margin-bottom: -40px;
   font-size: 0.5em;
-
 }
+
+.show-bio {
+  margin-left: 0;
+}
+
+.component-button__content-pop  {
+  margin-left: -3px;
+}
+
+
+
 
