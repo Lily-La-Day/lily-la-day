@@ -4,62 +4,91 @@ const squares = []
 
 
 const answers = [
-  'generalassembly',
-  'github',
-  'strangerthings',
-  'beatlemaniacs',
-  'boa',
-  'amiwrite',
-  'haikuwho',
-  'tetris',
-  'whodat',
-  'aboutme',
-  // 'bangemployed',
-  'linkedin',
-  'insta',
-  'youtube',
-  // 'webdeveloper',
-  'ajob'
-]
+  "generalassembly",
+  "github",
+  // "strangerthings",
+  "snake",
+  "amiwrite",
+  "haikuwho",
+  "dog",
+  // "tetris",
+  "whodat",
+  "aboutme",
+  "linkedin",
+  "insta",
+  "youtube",
+  "ajob",
+  "vmware",
+  "mumsnet",
+  "cloud",
+  "codewars",
+  "beatles",
+  "dev"
+];
+
 
 
 const links = {
-  linkedin: 'https://www.linkedin.com/in/lily-la-day/',
-  github: 'https://github.com/Lily-La-Day/',
-  tetris: 'https://github.com/Lily-La-Day/sei-project-one-tetris',
-  boa: 'https://github.com/Lily-La-Day/snake',
-  whodat: 'https://github.com/Lily-La-Day/sei-project-2/',
-  beatlemaniacs: 'https://github.com/Lily-La-Day/beatle-maniacs',
-  strangerthings: 'https://github.com/Lily-La-Day/sei-group-project-forked',
-  haikuwho: 'https://github.com/Lily-La-Day/haiku-who',
-  amiwrite: 'https://github.com/Lily-La-Day/project-four',
-  insta: 'https://www.instagram.com/lily.la.day/',
-  youtube: 'https://www.youtube.com/watch?v=VEcnOu2jfKY',
-  aboutme: '#',
-  webdeveloper: 'https://en.wikipedia.org/wiki/Web_developer',
-  // bangemployed: 'https://bang-employed.com',
-  generalassembly: 'https://generalassemb.ly/education/software-engineering-immersive/london',
-  ajob: 'mailto:lily.la.day.is@gmail.com?subject=Lily%20I%20Have%20A%20Job%20Offer%20For%20You'
-
-}
+  linkedin: "https://www.linkedin.com/in/lily-la-day/",
+  github: "https://github.com/Lily-La-Day/",
+  // tetris: "https://github.com/Lily-La-Day/sei-project-one-tetris",
+  snake: "https://github.com/Lily-La-Day/snake",
+  whodat: "https://github.com/Lily-La-Day/sei-project-2/",
+  beatles: "https://github.com/Lily-La-Day/beatle-maniacs",
+  // strangerthings: "https://github.com/Lily-La-Day/sei-group-project-forked",
+  haikuwho: "https://github.com/Lily-La-Day/haiku-who",
+  amiwrite: "https://github.com/Lily-La-Day/project-four",
+  insta: "https://www.instagram.com/lily.la.day/",
+  youtube: "https://www.youtube.com/watch?v=VEcnOu2jfKY",
+  aboutme: "https://www.theguardian.com/uk/2003/sep/28/research.health",
+  webdeveloper: "https://en.wikipedia.org/wiki/Web_developer",
+  generalassembly:
+    "https://generalassemb.ly/education/software-engineering-immersive/london",
+  ajob:
+    "mailto:lily.la.day.is@gmail.com?subject=Lily%20I%20Have%20A%20Job%20Offer%20For%20You",
+    vmware:
+    "https://www.vmware.com/uk.html",
+    mumsnet:
+    "https://www.mumsnet.com/Talk/active-conversations",
+    codewars: "https://www.codewars.com/users/Lily_Day",
+    cloud: "https://www.cloudhealthtech.com/",
+    dog: "https://www.dogsblog.com/category/age/6-years/",
+    dev: "https://en.wikipedia.org/wiki/Dev"
+};
 
 const clues = {
-  linkedin: 'The very worst of the online places.',
-  github: 'One of my very favourite online places',
-  tetris: 'My first proper project and with it, my first proper struggle! (An attempt at making) a Tetris clone using good old Vanilla JavaScript',
-  boa: 'A type of SNAKE - My favourite game as a child (and [sort of] my second project), another very basic game made by a (then) very inexperienced coder using Vanilla JS',
-  whodat: 'My third project, lots of firsts- working in a group, with React and playing with an API!',
-  beatlemaniacs: 'Where else would you find a database of Beatles songs? Thank god someone (ie. me) finally went and made one! I\'m pretty sure this info was impossible to come by until now. (My first fullstack MERN application)',
-  strangerthings: 'The big group project, another very original idea and another fullstack MERN application. ',
-  haikuwho: 'A little database of haiku portraits (made by me [obviously]), first time playing with Python and Flask for the backend.',
-  amiwrite: 'The big final project, a solo effort built over a week (a bloody sweaty, not quite tear-y week) , a full stack Python, Flask, React application.',
-  insta: 'Paintings of faces that I have done.',
-  youtube: 'A very short (but quite good!) video about one of my art projects. (From back when I was art-y rather than tech-y)',
-  // webdeveloper: 'What I am.',
-  generalassembly: 'Software Engineering Immersive- the coding "bootcamp" I have just completed (and miss a bit).',
-  ajob: 'What I would like... preferably one that involves coding. And if I\'m being really picky, as little styling as possible. I\'m fullstack (with emphasis on the full).',
-  aboutme: 'Sometimes I run quite far.'
-}
+  linkedin: "The very worst of the online places. (8)",
+  github: "One of my very favourite online places (6)",
+  // tetris:
+  //   "My first proper project and with it, my first proper struggle! (An attempt at making) a Tetris clone using good old Vanilla JavaScript",
+  snake:
+    "My favourite game as a child (and [sort of] my second project), another very basic game made by a not very experienced coder using Vanilla JS (5)",
+  whodat:
+    "My third project, lots of firsts- working in a group, with React and playing with an API! (3,3)",
+  beatles:
+    "My favourite band and the chosen content for my very first full-stack app. Where else would you find a database of Beatles songs? (7)",
+  // strangerthings:
+  //   "The big group project, another very original idea and another fullstack MERN application. (8,6) ",
+  haikuwho:
+    "A little database of haiku portraits (made by me [obviously]), first time playing with Python and Flask for the backend. (5,3)",
+  amiwrite:
+    "The big final project, a solo effort built over a week (a bloody sweaty, not quite tear-y week) , a full stack Python, Flask, React application. (2,1,5)",
+  insta: "Paintings of faces that I have done. (5)",
+  youtube:
+    "A very short (but quite good!) video about one of my art projects. (From back when I was art-y rather than tech-y) (7)",
+  generalassembly:
+    'Software Engineering Immersive- the coding "bootcamp" I have just completed (and miss a bit). (7,8)',
+    dog: "The thing that I want above all else. (3)",
+  ajob:
+    "If you may have one of these for me, please click here. (1,3)",
+  aboutme: "I have an abnormally large head. (5,7)" ,
+  vmware: "Thank you for employing me - it's been great! (6)",
+  codewars: "For when I want to code but don't want to think about what I want to code. (7)",
+  mumsnet: "My favourite non-techy online place. (7)",
+  cloud: "...Health, the company I once called home. Also, you know, AWS, Azure etc... (5)",
+  dev: "urrmmm, what I am? (3)",
+
+};
 
 
 
@@ -224,25 +253,25 @@ const init = () => {
     clue.innerHTML = `<h5>${i+1}</h5><p ><a href=''>${clues[answers[i]]}</p></a>`
   }
 
-  down('strangerthings', 9)
-  // down('webdeveloper', 45)
-  down('insta', 150)
-  across('generalassembly', 0)
-  // across('bangemployed', 212)
-  across('linkedin', 167)
-  down('beatlemaniacs', 12)
-  down('github', 0)
-  across('haikuwho', 45)
-  down('youtube', 14)
-  down('whodat', 50)
-  across('aboutme', 121)
-  down('ajob', 93)
-  across('amiwrite', 210)
-  down('tetris', 149)
-  down('boa', 37)
-
-
-
+  // down("strangerthings", 9);
+  down("insta", 150);
+  across("generalassembly", 0);
+  across("vmware", 144)
+  across("linkedin", 184);
+  across("cloud", 91);
+  down("github", 0);
+  across("haikuwho", 45);
+  down("youtube", 14);
+  down("whodat", 50);
+  down("codewars",72)
+  across("aboutme", 121);
+  down("dev", 189);
+  across("ajob", 39)
+  down("mumsnet", 126);
+  across("amiwrite", 210);
+  down("beatles", 134);
+  down("snake", 9);
+  down("dog", 37)
 
 
 
@@ -392,21 +421,6 @@ const init = () => {
 
   showBio.addEventListener('click', getSetter)
   showCross.addEventListener('mouseover', showCrossword)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 }
