@@ -1358,7 +1358,11 @@ header.new-header.pillar-scheme-- {
 
 }
 
-@media (max-width: 1000px) {
+.portfolio {
+  grid-column-start: 4;
+}
+
+@media (max-width: 1200px) {
 
   nav {
     grid-template-columns: 100px 400px 400px 200px;
@@ -1372,6 +1376,10 @@ header.new-header.pillar-scheme-- {
   .top {
     margin-left: -50px;
   }
+  .break {
+    display: inline;
+  }
+
 }
 
 
@@ -1435,6 +1443,9 @@ header.new-header.pillar-scheme-- {
   nav {
     width: auto;
     grid-template-columns: repeat(2, 340px);
+  }
+  .break {
+    display: inline;
   }
 }
 
