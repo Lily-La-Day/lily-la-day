@@ -1,3 +1,12 @@
+
+/* Dear Guardian,
+I hope you do not mind too much that I have so shamelessly lifted (and then proceeded to mess with) your CSS.
+It came from a place of love.
+Kind regards,
+Lily  */
+
+
+
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:300&display=swap');
 
 * {
@@ -14,7 +23,7 @@ body {
   width: 90%;
 }
 
-.main  {
+.main {
   min-width: fit-content;
   margin-right: -200px;
   margin-left: 20px;
@@ -114,12 +123,13 @@ body {
   border-color: #eacca0;
 }
 
-.pillar-link:before, .pillar-link:not(.pillar-link--dropdown):after {
-    bottom: 0;
-    content: '';
-    display: block;
-    left: 0;
-    position: absolute;
+.pillar-link:before,
+.pillar-link:not(.pillar-link--dropdown):after {
+  bottom: 0;
+  content: '';
+  display: block;
+  left: 0;
+  position: absolute;
 }
 
 
@@ -860,7 +870,7 @@ p {
   width: 88%;
 }
 
- /* svg .comment-icon {
+/* svg .comment-icon {
   margin-bottom: -5px !important;
 } */
 
@@ -1179,18 +1189,10 @@ div.letters {
   color: white;
 }
 
-
-
-/* .component-button__content {
-    opacity: 1;
-    animation: fade 2s linear;
-} */
-
 .contributions__adblock-button:hover {
   background: #812958;
   color: white;
 }
-
 
 @keyframes fade {
   0% {
@@ -1317,10 +1319,12 @@ header.new-header.pillar-scheme-- {
 .show-bio {
   margin-left: 0;
 }
-.cta-bar__subheading  {
+
+.cta-bar__subheading {
   margin-top: 5px;
 }
-.component-button__content-pop  {
+
+.component-button__content-pop {
   margin-left: -4px;
 }
 
@@ -1341,14 +1345,14 @@ header.new-header.pillar-scheme-- {
   .clues {
     grid-row: 2;
     grid-column: 1;
-    align-self: flex-start ;
+    align-self: flex-start;
     grid-template-columns: repeat(2, 50%);
     max-width: 600px;
   }
 
 }
 
-@media  (max-width: 1000px)  {
+@media (max-width: 1000px) {
 
   nav {
     grid-template-columns: 100px 400px 400px 200px;
@@ -1356,7 +1360,7 @@ header.new-header.pillar-scheme-- {
     font-size: 0.9em;
   }
 
-  .portfolio{
+  .portfolio {
     grid-column-start: 3;
   }
 
@@ -1366,16 +1370,16 @@ header.new-header.pillar-scheme-- {
 }
 
 
-@media  (max-width: 850px)  {
+@media (max-width: 850px) {
 
   nav {
     width: auto;
   }
 
   .pillar-container {
-   overflow: hidden;
-   display: flex;
-   grid-column-end:3;
+    overflow: hidden;
+    display: flex;
+    grid-column-end: 3;
   }
 
   .top {
@@ -1384,7 +1388,7 @@ header.new-header.pillar-scheme-- {
     margin-left: 0;
   }
 
-  .portfolio  {
+  .portfolio {
     grid-column: 2/3;
     grid-row: 1;
     margin-right: 4em
@@ -1411,7 +1415,8 @@ header.new-header.pillar-scheme-- {
     max-width: 600px;
 
   }
-  .fc-item__container{
+
+  .fc-item__container {
     display: grid;
   }
 
@@ -1421,14 +1426,14 @@ header.new-header.pillar-scheme-- {
 
 }
 
-@media  (max-width: 700px)  {
-  nav{
+@media (max-width: 700px) {
+  nav {
     width: auto;
     grid-template-columns: repeat(2, 340px);
   }
 }
 
-@media  (max-width: 500px) {
+@media (max-width: 500px) {
 
   .portfolio {
     grid-column: 2/3;
@@ -1446,11 +1451,11 @@ header.new-header.pillar-scheme-- {
     margin-right: -12px;
   }
 
- .top  {
-  grid-template-rows: 20% 20% 30%;
-  row-gap: 15px;
-  padding-left: 20px;
- }
+  .top {
+    grid-template-rows: 20% 20% 30%;
+    row-gap: 15px;
+    padding-left: 20px;
+  }
 
 
   nav {
@@ -1498,9 +1503,10 @@ header.new-header.pillar-scheme-- {
 
   }
 
-  .fc-item__container{
+  .fc-item__container {
     display: grid;
   }
+
   .break {
     display: inline;
   }
@@ -1508,12 +1514,8 @@ header.new-header.pillar-scheme-- {
 }
 
 
-@media  (max-width: 400px) {
+@media (max-width: 400px) {
   .portfolio {
     display: none;
   }
 }
-
-
-
-

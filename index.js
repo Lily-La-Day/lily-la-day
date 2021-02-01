@@ -54,7 +54,7 @@ const clues = {
   whodat:
     "My third project, lots of firsts- working in a group, with React and playing with an API! (3,3)",
   beatles:
-    "My favourite band and the chosen content for my very first full-stack app. Where else would you find a database of Beatles songs? (7)",
+    "My favourite band and the chosen subject of my very first full-stack app. (7)",
 
   haikuwho:
     "A little database of haiku portraits (made by me [obviously]), first time playing with Python and Flask for the backend. (5,3)",
@@ -91,7 +91,7 @@ const init = () => {
       tiny.setAttribute("id", "tiny");
       const a = document.createElement("a");
       a.href = "";
-      a.setAttribute('target', '_blank');
+      a.setAttribute("target", "_blank");
       square.append(a);
       square.dataset.index = i;
       squares.push(square);
