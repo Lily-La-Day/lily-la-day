@@ -1356,7 +1356,6 @@ header.new-header.pillar-scheme-- {
 
   nav {
     grid-template-columns: 100px 400px 400px 200px;
-    max-width: 1000px;
     font-size: 0.9em;
   }
 
