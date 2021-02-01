@@ -1,7 +1,5 @@
 const width = 15;
-
 const squares = [];
-
 const answers = [
   "generalassembly",
   "github",
@@ -238,7 +236,6 @@ const init = () => {
     }</p></a>`;
   }
 
-  // down("strangerthings", 9);
   down("insta", 150);
   across("generalassembly", 0);
   across("vmware", 144);
@@ -340,9 +337,7 @@ const init = () => {
   };
 
   const showBio = document.querySelector(".show-bio");
-  console.log(showBio);
   const showCross = document.querySelector(".show-crossword");
-  console.log(showCross);
   const bio = document.querySelector(".bio");
 
   const getSetter = () => {
