@@ -67,7 +67,7 @@ const clues = {
     'Software Engineering Immersive- the coding "bootcamp" I have just completed (and miss a bit). (7,8)',
   dog: "The thing that I want above all else. (3)",
   ajob: "If you may have one of these for me, please click here. (1,3)",
-  aboutme: "I have an abnormally large head. (5,7)",
+  aboutme: "I have an abnormally large head. (5,2)",
   vmware: "Thank you for employing me - it's been great! (6)",
   codewars:
     "For when I want to code but don't want to think about what I want to code. (7)",
@@ -141,7 +141,6 @@ const init = () => {
       tiny.innerHTML = i;
       clue.append(tiny);
       tiny.setAttribute("id", "tiny");
-      clueSection.style.height = "80vh";
     }
   };
 
@@ -151,7 +150,6 @@ const init = () => {
   const across = (clue, index) => {
     const answer = document.createElement("h6");
     answer.append(clue);
-    // console.log(answers.indexOf(clue))
     const letters = answer.innerHTML.split("");
     document.querySelector(`[data-index="${index}"]`).classList.add(index);
 
@@ -263,7 +261,6 @@ const init = () => {
   answers.forEach(clue => {
     const els = document.querySelectorAll(`[class*="${clue}"]`);
     els.forEach(el => {
-
       el.querySelector("a").href = links[clue];
     });
   });
