@@ -53,7 +53,6 @@ const clues = {
     "My third project, lots of firsts- working in a group, with React and playing with an API! (3,3)",
   beatles:
     "My favourite band and the chosen subject of my very first full-stack app. (7)",
-
   haikuwho:
     "A little database of haiku portraits (made by me [obviously]), first time playing with Python and Flask for the backend. (5,3)",
   amiwrite:
@@ -62,7 +61,7 @@ const clues = {
   youtube:
     "A very short (but quite good!) video about one of my art projects. (From back when I was art-y rather than tech-y) (7)",
   generalassembly:
-    'Software Engineering Immersive- the coding "bootcamp" I have just completed (and miss a bit). (7,8)',
+    'Software Engineering Immersive- the coding "bootcamp" I attended and three of the best months of my life (sad, I know!). (7,8)',
   dog: "The thing that I want above all else. (3)",
   ajob: "If you may have one of these for me, please click here. (1,3)",
   aboutme: "I have an abnormally large head. (5,2)",
