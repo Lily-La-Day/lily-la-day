@@ -1616,6 +1616,12 @@ header.new-header.pillar-scheme-- {
     margin-top: 65px
   }
 
+  .index-page-header {
+    width: 100%;
+    margin-left: 3px;
+  }
+
+
   div.grid {
     grid-column: 1;
     grid-row: 1;
@@ -1667,6 +1673,11 @@ header.new-header.pillar-scheme-- {
     margin-top: 0;
   }
 
+  .index-page-header {
+    width: 100%;
+    margin-left: 3px;
+  }
+
   }
   .top {
     margin-left: 0;
@@ -1683,4 +1694,4 @@ header.new-header.pillar-scheme-- {
     margin-left: 0;
   }
 
-  
+
